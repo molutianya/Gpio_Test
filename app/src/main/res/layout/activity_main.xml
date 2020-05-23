@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0FFFF">
+
+    <ImageView
+        android:id="@+id/io"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/io0" />
+
+    <Button
+        android:id="@+id/cle"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="10dp"
+        android:background="#f00"
+        android:text="清空" />
+
+    <TextView
+        android:id="@+id/a1"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="IO端口3产生的信号:"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:id="@+id/a4"
+        android:layout_below="@id/a1">
+
+        <TextView
+            android:id="@+id/showio"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:background="#2b2b2b"
+            android:paddingLeft="20dp"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+    </ScrollView>
+
+
+    <EditText
+        android:id="@+id/settime"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="600dp"
+        android:layout_marginTop="50dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:hint="过滤时间(ms)"
+        android:text="0"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/set"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/settime"
+        android:layout_toRightOf="@id/settime"
+        android:background="#ADFF2F"
+        android:text="设  置"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/a2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/settime"
+        android:layout_below="@id/settime"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="正  常  信     号"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/ok"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/a2"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/a2"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/a3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/a2"
+        android:layout_below="@id/a2"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="被过滤的信号"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/ng"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/a3"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/a3"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#f00"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_alignLeft="@id/a3"
+        android:layout_below="@id/a3"
+        android:layout_marginTop="50dp"
+        android:text="注：\n 过滤时间指的是IO信号的\n波长时间，如果IO产生的信号波长\n时间大于过滤时间，则表示正常信号，否则表示被过滤的信号。\n\n 左边的黑色框数据是可以滑动的"
+        android:textColor="#000"
+        android:textSize="25dp" />
+
+
+</RelativeLayout>
